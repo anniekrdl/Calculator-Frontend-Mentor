@@ -1,0 +1,263 @@
+/* Theme 1 */
+:root {
+    --theme-1-main-background: hsl(222, 26%, 31%);
+    --theme-1-toggle-background: hsl(223, 31%, 20%);
+    --theme-1-keypad-background: hsl(223, 31%, 20%);
+    --theme-1-screen-background: hsl(224, 36%, 15%);
+
+    --theme-1-key-background: hsl(225, 21%, 49%);
+    --theme-1-key-shadow: hsl(224, 28%, 35%);
+    --theme-1-toggle-key-background: hsl(6, 63%, 50%);
+    --theme-1-toggle-key-shadow: hsl(6, 70%, 34%);
+    --theme-1-secondary-key-background: hsl(30, 25%, 89%);
+    --theme-1-secondary-key-shadow: hsl(28, 16%, 65%);
+
+    --theme-1-text-primary: hsl(221, 14%, 31%);
+    --theme-1-text-secondary: hsl(0, 0%, 100%);
+
+    --theme-2-main-background: hsl(0, 0%, 90%);
+    --theme-2-toggle-background: hsl(0, 5%, 81%);
+    --theme-2-keypad-background: hsl(0, 5%, 81%);
+    --theme-2-screen-background: hsl(0, 0%, 93%);
+
+    --theme-2-key-background: hsl(185, 42%, 37%);
+    --theme-2-key-shadow: hsl(185, 58%, 25%);
+    --theme-2-toggle-key-background: hsl(25, 98%, 40%);
+    --theme-2-toggle-key-shadow: hsl(25, 99%, 27%);
+    --theme-2-secondary-key-background: hsl(45, 7%, 89%);
+    --theme-2-secondary-key-shadow: hsl(35, 11%, 61%);
+
+    --theme-2-text-primary: hsl(60, 10%, 19%);
+    --theme-2-text-secondary: hsl(0, 0%, 100%);
+
+
+    --theme-3-main-background: hsl(268, 75%, 9%);
+    --theme-3-toggle-background: hsl(268, 71%, 12%);
+    --theme-3-keypad-background: hsl(268, 71%, 12%);
+    --theme-3-screen-background: hsl(268, 71%, 12%);
+
+    --theme-3-key-background: hsl(281, 89%, 26%);
+    --theme-3-key-shadow: hsl(285, 91%, 52%);
+    --theme-3-toggle-key-background: hsl(176, 100%, 44%);
+    --theme-3-toggle-key-shadow: hsl(177, 92%, 70%);
+    --theme-3-secondary-key-background: hsl(268, 47%, 21%);
+    --theme-3-secondary-key-shadow: hsl(290, 70%, 36%);
+
+    --theme-3-text-primary: hsl(52, 100%, 62%);
+    --theme-3-text-secondary: hsl(198, 20%, 13%);
+    --theme-3-text-tertiary: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    box-sizing: border-box;
+    color: var(--text-color-all)
+}
+
+body {
+    background-color: var(--main-background);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+}
+
+.theme {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.theme-txt {
+    font-size: small;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 15px;
+
+}
+
+.theme-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.theme-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    div {
+        font-size: small;
+    }
+}
+
+.theme-button-bg {
+    background-color: var(--toggle-background);
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    padding: 3px;
+    justify-content: space-between;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.theme-bt {
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    background-color: var(--button-color-toggle-key);
+    align-self: center;
+
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+}
+
+.fade-out {
+    animation-name: fadeOut;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+.answer-screen {
+    background-color: var(--screen-background);
+    padding: 20px;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.buttons-calc {
+    background-color: var(--keypad-background);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b {
+    width: 100%;
+    margin: 5px;
+    background-color: var(--button-color-primary);
+    text-align: center;
+    border-radius: 10px;
+    color: var(--text-color-primary);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--button-color-shadow-primary);
+    -moz-box-shadow: 0px 4px 0px 0px var(--button-color-shadow-primary);
+    box-shadow: 0px 4px 0px 0px var(--button-color-shadow-primary);
+
+
+}
+
+.b-red {
+    background-color: var(--button-color-toggle-key);
+    color: var(--text-color-secondary);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--button-color-toggle-key-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--button-color-toggle-key-shadow);
+    box-shadow: 0px 4px 0px 0px var(--button-color-toggle-key-shadow);
+
+}
+
+.b-blue {
+    background-color: var(--button-color-secondary);
+    color: var(--text-color-tertiary);
+    -webkit-box-shadow: 0px 4px 0px 0px var(--button-color-secondary-shadow);
+    -moz-box-shadow: 0px 4px 0px 0px var(--button-color-secondary-shadow);
+    box-shadow: 0px 4px 0px 0px var(--button-color-secondary-shadow);
+
+
+}
+
+@media (max-width: 375px) {
+
+    * {}
+
+    .container {
+        margin: 20px;
+    }
+
+    .b {
+        display: flex;
+        aspect-ratio: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .b-blue,
+    .b-red {
+        aspect-ratio: 2.1;
+    }
+
+    #reset,
+    #del {
+        font-size: 25px;
+
+    }
+
+    #del {
+
+        aspect-ratio: 1;
+    }
+
+}
